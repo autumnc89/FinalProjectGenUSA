@@ -2,7 +2,18 @@ body{
     font-family: "Montserrat", sans-serif; !important;
     background: url("Images/bg_bggenerator_com (1).jpg") no-repeat fixed;
   }
+
   
+
+  #welcomePage{
+    background-color: #6b5b95;
+    background-image: url("Images/gaming-logo-maker-featuring-an-alien-illustration-1877p-2931.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    background-attachment: fixed;
+    background-position: center;
+  }
   .container {
       background-color: rgba(255, 255, 255, 0.80);
       border-radius: 25px;
@@ -30,6 +41,8 @@ body{
     left:0;
     top:0;
 } */
+
+
   h1,
   h2,
   h3,
@@ -41,3 +54,6 @@ body{
     font-weight: 300;
     text-transform: uppercase;
   }
+
+  
+  
