@@ -5,7 +5,7 @@
   body,
   html {
     font-family: "Montserrat", sans-serif, !important;
-    background: url("Images/bg_bggenerator_com (1).jpg");
+    background: url("./Images/bg_bggenerator_com (1).jpg");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
