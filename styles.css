@@ -28,15 +28,15 @@ body{
       text-align: center;
   }
   
-  #tasks{
+  /* #tasks{
     text-align: center;
     color:#8f588f;
     font-weight: bold;
     text-shadow:1px 1px 15px #a2b9bc;
-  }
+  } */
   
 
-
+/* 
   h1,
   h2,
   h3,
@@ -47,7 +47,93 @@ body{
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     text-transform: uppercase;
+  } */
+
+  
+  h2 {
+    /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+    font-style: oblique;
+    font-size: 40px;
+    padding: 20px 0;
+    color: rgb(18, 18, 19);
+    text-align: center;
   }
+  
+  .task-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+  }
+  
+  .task-bottom {
+    display: flex;
+    flex-direction: row;
+    align-self: right;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+  
+  .task {
+    display: inline-block;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-weight: lighter;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    padding-right: initial;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 480px;
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+    font-weight: lighter;
+    font-size: 22px;
+    color: rgba(37, 37, 40, 0.959);
+  }
+
+.form-task{
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: -80px;
+  border-radius: 25px;
+  width: 500px;
+  margin-left: 500px;
+  height: 540px;
+
+}
+form{
+  justify-content: space-between;
+  width: 480px;
+}  
+
+#assigned{
+  margin-left: 20px;
+}
+
+#duedate{
+  margin-left: 60px;
+}
+
+.btn-block {
+  display: block;
+  width: 70%;
+  margin-left: 70px;
+}
+
+#img{
+  border-radius: 40%;
+}
+
+
+
+
+
+
+
+
 
   .wrapper{
     position: fixed;
