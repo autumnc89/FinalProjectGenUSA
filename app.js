@@ -18,6 +18,23 @@ newTaskForm.addEventListener('submit', (event) => {
         Validation code here
     */
 
+        // if (description==="") {
+        //     $('#descrip-alert').show()
+        //     setTimeout(()=>{$('#descrip-alert').hide()},2000)
+        //     return false;
+        // }
+        // if (assignedTo===""){
+        //     $('#assigned-alert').show()
+        //     setTimeout(()=>{$('#assigned-alert').hide()},2000)
+        //     return false;
+        // }
+        // if (dueDate === ""){
+        //     $('#due-alert').show()
+        //     setTimeout(()=>{$('#due-alert').hide()},2000)
+        //     return false;
+        // }
+    
+
     const name = newTaskNameInput.value;
     const description = newTaskDescription.value;
     const assignedTo = newTaskAssignedTo.value;
@@ -69,4 +86,5 @@ tasksList.addEventListener('click', (event) => {
         // Render the tasks
         taskManager.render();
     }
+    
 });
