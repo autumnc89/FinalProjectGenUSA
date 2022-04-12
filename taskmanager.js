@@ -18,7 +18,7 @@ const createTaskHtml = (name,description,assignedTo,dueDate,status,id) => {
                       <span class="task-assign"><strong> Assigned to: </strong>: ${assignedTo}</span>
                     </div>
                     <div>
-                      <span class="task-date"><strong> Due to: </strong> ${dueDate}</span>
+                      <span class="task-date"><strong> Due on: </strong> ${dueDate}</span>
                     </div>
                     <div class="task-bottom">
                       <div>
