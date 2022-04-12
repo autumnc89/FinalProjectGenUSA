@@ -1,90 +1,62 @@
-const taskManager = new TaskManager(0);
-
-taskManager.load();
-
-taskManager.render();
-
-const newTaskForm = document.querySelector('#newTaskForm');
-
-newTaskForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const newTaskNameInput = document.querySelector('#newTaskNameInput');
-    const newTaskDescription = document.querySelector('#newTaskDescription');
-    const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
-    const newTaskDueDate = document.querySelector('#newTaskDueDate');
-
-    /*
-        Validation code here
-    */
-
-        // if (description==="") {
-        //     $('#descrip-alert').show()
-        //     setTimeout(()=>{$('#descrip-alert').hide()},2000)
-        //     return false;
-        // }
-        // if (assignedTo===""){
-        //     $('#assigned-alert').show()
-        //     setTimeout(()=>{$('#assigned-alert').hide()},2000)
-        //     return false;
-        // }
-        // if (dueDate === ""){
-        //     $('#due-alert').show()
-        //     setTimeout(()=>{$('#due-alert').hide()},2000)
-        //     return false;
-        // }
-    
-
+const taskManager = new TaskManager()
+taskManager.load()
+taskManager.render()
+const validFormFieldInput = () => {
+    const newTaskNameInput = document.querySelector('#task-name')   ;
     const name = newTaskNameInput.value;
-    const description = newTaskDescription.value;
-    const assignedTo = newTaskAssignedTo.value;
-    const dueDate = newTaskDueDate.value;
-
-    taskManager.addTask(name, description, assignedTo, dueDate);
-
-    taskManager.save();
-
-    taskManager.render();
-
-    newTaskNameInput.value = '';
-    newTaskDescription.value = '';
-    newTaskAssignedTo.value = '';
-    newTaskDueDate.value = '';
-});
-
-const tasksList = document.querySelector('#tasksList');
-
-tasksList.addEventListener('click', (event) => {
-    if (event.target.classList.contains('done-button')) {
-        const parentTask = event.target.parentElement.parentElement;
-
-        const taskId = Number(parentTask.dataset.taskId);
-
-        const task = taskManager.getTaskById(taskId);
-
-        task.status = 'DONE';
-
-        taskManager.save();
-
-        taskManager.render();
+    const newDescriptionInput = document.querySelector('#description');
+    const description = newDescriptionInput.value;
+    const newAssignedToInput = document.querySelector('#assigned-to');
+    const assignedTo = newAssignedToInput.value;
+    const newDueDateInput = document.querySelector('#due-date');
+    const dueDate = newDueDateInput.value;
+    if (name===""){
+        $('#name-alert').show()
+        setTimeout(()=>{$('#name-alert').hide()},2000)
+        return false;
+    }
+    if (description==="") {
+        $('#descrip-alert').show()
+        setTimeout(()=>{$('#descrip-alert').hide()},2000)
+        return false;
+    }
+    if (assignedTo===""){
+        $('#assigned-alert').show()
+        setTimeout(()=>{$('#assigned-alert').hide()},2000)
+        return false;
+    }
+    if (dueDate === ""){
+        $('#due-alert').show()
+        setTimeout(()=>{$('#due-alert').hide()},2000)
+        return false;
+    }
+    taskManager.addTask(name,description,assignedTo,dueDate)
+    taskManager.save()
+    taskManager.render()
+    newTaskNameInput.value = ""
+    newDescriptionInput.value = ""
+    newAssignedToInput.value = ""
+    newDueDateInput.value = ""
+}
+const tasksList = document.querySelector('#tasks');
+tasksList.addEventListener('click',(event) => {
+        const parentTask = event.target.parentElement.parentElement.parentElement
+        const taskId = parentTask.dataset.taskId
+        const task = taskManager.getTaskById(taskId)
+    if (event.target.classList.contains('done-button')){
+        task.status = "DONE"
+        taskManager.save()
+        taskManager.render()
+        return false;
     }
 
-    // Check if a "Delete" button was clicked
-    if (event.target.classList.contains('delete-button')) {
-        // Get the parent Task
-        const parentTask = event.target.parentElement.parentElement;
-
-        // Get the taskId of the parent Task.
-        const taskId = Number(parentTask.dataset.taskId);
-
-        // Delete the task
-        taskManager.deleteTask(taskId);
-
-        // Save the tasks to localStorage
+    if (event.target.classList.contains("delete-button")) {
+      if (task.status == "DONE") {
+        taskManager.deleteTask();
         taskManager.save();
-
-        // Render the tasks
         taskManager.render();
+        return false;
+      }
     }
-    
+   
 });
