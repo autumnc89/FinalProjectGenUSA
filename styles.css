@@ -100,8 +100,9 @@
     padding-right: initial;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 480px;
+    width: 400px;
     margin-bottom: 10px;
+    
   }
   
   .form-group {
@@ -112,18 +113,25 @@
   }
 
 .form-task{
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(213, 219, 247, 0.8);
   margin-top: -80px;
+  border: 4px solid white;
   border-radius: 25px;
-  width: 500px;
-  margin-left: 500px;
+  width: 450px;
+  margin-left: 300px;
   height: 540px;
   /* justify-content: center; */
 
 }
+.list-group-item{
+    border: 4px solid white;
+    
+    background-color: rgba(213, 219, 247, 0.8);
+    
+}
 form{
   justify-content: space-between;
-  width: 480px;
+  width: 400px;
 }  
 
 #assigned{
