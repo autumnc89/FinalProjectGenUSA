@@ -31,7 +31,7 @@ const createTaskHtml = (name,description,assignedTo,dueDate,status,id) => {
                       </div>
                     </div>
                   </div>
-                </li><br>`
+                </li>`
     return html;  }
    class TaskManager {
         constructor(currentId=0) {
