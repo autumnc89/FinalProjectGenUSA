@@ -16,6 +16,6 @@ Repo: https://github.com/autumnc89/FinalProjectGenUSA
 
 Deployed Site: https://autumnc89.github.io/FinalProjectGenUSA/
 
-+ Autumn: HTML, CSS, JS
++ Autumn: HTML, CSS, JS, Welcome page, About Us page
 + Yeti: HTML, CSS, JS
 + Betty: 
