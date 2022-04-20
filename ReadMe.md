@@ -8,7 +8,7 @@ Deployed Site: https://autumnc89.github.io/GenUSAFinalProject/
 
 + Autumn: HTML, CSS, Form page, background design, logo design
 + Brian: Task cards
-+ Betty:
++ Betty: Moqup
 
 # Sprint 2/3:
 
@@ -18,4 +18,4 @@ Deployed Site: https://autumnc89.github.io/FinalProjectGenUSA/
 
 + Autumn: HTML, CSS, JS, Welcome page, About Us page
 + Yeti: HTML, CSS, JS
-+ Betty: 
++ Betty: Presentation 
