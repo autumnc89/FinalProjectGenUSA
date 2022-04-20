@@ -6,7 +6,7 @@ Repo: https://github.com/autumnc89/GenUSAFinalProject
 
 Deployed Site: https://autumnc89.github.io/GenUSAFinalProject/
 
-+ Autumn: HTML, CSS, Form page
++ Autumn: HTML, CSS, Form page, background design, logo design
 + Brian: Task cards
 + Betty:
 
